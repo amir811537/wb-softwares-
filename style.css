@@ -161,12 +161,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+  position: relative;
 }
-.wrapper .main_content .overlay .mejban img{
- width: 330px;
- height: 830px;
-  
+
+.wrapper .main_content .overlay .mejban img {
+  width: 330px;
+  height: 830px;
 }
 
 .wrapper .main_content .overlay .mejban h1,
@@ -190,37 +190,26 @@ body {
   text-decoration: none;
 }
 
-
-.wrapper .main_content .overlay .mejban h1 {
-  margin-bottom: 10px;
+.wrapper .main_content .overlay .mejban::before {
+  content: '';
+  background: url('./images/wb logo.png') no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 6px;
 }
 
-.wrapper .main_content .overlay .mejban p {
-  margin-bottom: 20px;
-}
-
-.wrapper .main_content .overlay .mejban button {
-  background: #06284B;
-  background-image: -webkit-linear-gradient(top, #06284B, #06284B);
-  background-image: -moz-linear-gradient(top, #06284B, #06284B);
-  background-image: -ms-linear-gradient(top, #06284B, #06284B);
-  background-image: -o-linear-gradient(top, #06284B, #06284B);
-  background-image: linear-gradient(to bottom, #06284B, #06284B);
-  -webkit-border-radius: 5;
-  -moz-border-radius: 5;
-  border-radius: 5px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
+.wrapper .main_content .overlay .mejban:hover::before {
+  opacity: 0.7;
 }
 
 .responsive-iframe-container {
-
   overflow: hidden;
   width: 100%;
-  padding-top: 56.25%; 
+  padding-top: 56.25%;
 }
 
 .responsive-iframe-container iframe {
@@ -238,13 +227,16 @@ body {
   font-size: 24px;
   cursor: pointer;
 }
+
 .form .input-box {
   width: 100%;
   margin-top: 20px;
 }
+
 .input-box label {
   color: #333;
 }
+
 .form :where(.input-box input, .select-box) {
   height: 50px;
   width: 100%;
@@ -256,43 +248,54 @@ body {
   border-radius: 6px;
   padding: 10px 15px;
 }
+
 .input-box input:focus {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
+
 .form .column {
   display: flex;
   column-gap: 15px;
 }
+
 .form .gender-box {
   margin-top: 20px;
 }
+
 .gender-box h3 {
   color: #333;
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 8px;
 }
+
 .form :where(.gender-option, .gender) {
   display: flex;
   align-items: center;
   column-gap: 50px;
   flex-wrap: wrap;
 }
+
 .form .gender {
   column-gap: 5px;
 }
+
 .gender input {
   accent-color: rgb(130, 106, 251);
 }
+
 .form :where(.gender input, .gender label) {
   cursor: pointer;
 }
+
 .gender label {
   color: #707070;
 }
+
 .address :where(input, .select-box) {
   margin-top: 15px;
 }
+
 .select-box select {
   height: 100%;
   width: 100%;
@@ -301,6 +304,7 @@ body {
   color: #707070;
   font-size: 1rem;
 }
+
 .form button {
   height: 55px;
   width: 100%;
@@ -313,19 +317,14 @@ body {
   transition: all 0.2s ease;
   background: rgb(130, 106, 251);
 }
+
 .form button:hover {
   background: rgb(88, 56, 250);
 }
 
-
-
-
-
-
-
 @media (max-width: 768px) {
   .wrapper .sidebar {
-    transform: translateX(-250px); 
+    transform: translateX(-250px);
   }
 
   .wrapper .sidebar.active {
@@ -385,12 +384,15 @@ body {
   .wrapper .main_content .overlay {
     grid-template-columns: 1fr;
   }
+
   .form .column {
     flex-wrap: wrap;
   }
+
   .form :where(.gender-option, .gender) {
     row-gap: 15px;
   }
+
   .wrapper .main_content .overlay .mejban {
     color: black;
     background-color: white;
@@ -407,25 +409,9 @@ body {
     align-items: center;
     position: relative;
   }
-  
-  .wrapper .main_content .overlay .mejban::before {
-    content: '';
-    background: url('./images/wb logo.png') no-repeat center center;
-    background-size: cover;
-    position: absolute;
-  
-    width: 200px;;
-    height: 100px;
-    opacity: 0;
-    border: none;
-    border-radius: 9999px;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 6px;
-  }
-  .wrapper .main_content .overlay .mejban img{
-    width: 400px;
+
+  .wrapper .main_content .overlay .mejban img {
+    width: 300px;
     height: auto;
-     
-   }
-   
+  }
 }
