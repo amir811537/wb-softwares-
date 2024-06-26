@@ -163,6 +163,11 @@ body {
   align-items: center;
   
 }
+.wrapper .main_content .overlay .mejban img{
+ width: 330px;
+ height: 830px;
+  
+}
 
 .wrapper .main_content .overlay .mejban h1,
 .wrapper .main_content .overlay .mejban p,
@@ -393,13 +398,34 @@ body {
     border: 3px solid #22C55E;
     border-radius: 6px;
     text-align: center;
-    width: 400px;
-    height: fit-content;
+    width: 330px;
+    height: 800px;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    position: relative;
   }
+  
+  .wrapper .main_content .overlay .mejban::before {
+    content: '';
+    background: url('./images/wb logo.png') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+  
+    width: 200px;;
+    height: 100px;
+    opacity: 0;
+    border: none;
+    border-radius: 9999px;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 6px;
+  }
+  .wrapper .main_content .overlay .mejban img{
+    width: 400px;
+    height: auto;
+     
+   }
+   
 }
