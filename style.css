@@ -193,10 +193,10 @@ body {
 .wrapper .main_content .overlay .mejban::before {
   content: '';
   background: url('./images/wb logo.png') no-repeat center center;
-  background-size: cover;
+  background-size: contain;
   position: absolute;
   width: 100%;
-  height: 50%;
+  height: 20%;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   border-radius: 6px;
@@ -237,7 +237,11 @@ body {
   color: #333;
 }
 .card2{
-  border: wheat;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
   
 }
 .form :where(.input-box input, .select-box) {
@@ -444,7 +448,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
   }
 
   .wrapper .main_content .overlay .mejban img {
