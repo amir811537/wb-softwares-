@@ -236,7 +236,10 @@ body {
 .input-box label {
   color: #333;
 }
-
+.card2{
+  border: wheat;
+  
+}
 .form :where(.input-box input, .select-box) {
   height: 50px;
   width: 100%;
@@ -321,6 +324,40 @@ body {
 .form button:hover {
   background: rgb(88, 56, 250);
 }
+
+
+.cardtext {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+.card1 {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 30%;
+}
+
+.card1 h4 {
+  margin-bottom: 15px;
+}
+
+.card1 ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.card1 ol {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+
+
 
 @media (max-width: 768px) {
   .wrapper .sidebar {
@@ -413,5 +450,16 @@ body {
   .wrapper .main_content .overlay .mejban img {
     width: 300px;
     height: auto;
+  }
+  @media (max-width: 768px) {
+    .cardtext {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card1 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 }
